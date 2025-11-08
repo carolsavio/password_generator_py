@@ -1,34 +1,41 @@
-# Gerador de Senhas Seguras
+# 🔐 Secure Password Generator  
+*[Português - BR](README.pt-BR.md)*  
 
-Um gerador simples de senhas aleatórias e seguras, feito em Python.
-Utiliza fontes criptograficamente seguras (`secrets`) e permite escolher o tamanho e conjunto de caracteres.
- 
-## Requisitos
+A simple generator for random and secure passwords, built with Python.  
+It uses cryptographically secure sources (`secrets`) and allows you to choose the password length and character set.
 
-- Python 3.10 ou superior
-- Nenhuma dependência externa (usa apenas biblioteca padrão)
+## Requirements
 
-## Como usar
-Execute o script pelo terminal:
+- Python 3.10 or higher  
+- No external dependencies (uses only the standard library)
+
+## Usage
+
+Run the script from the terminal:
 
 ```
-python generator.py [opções]
+python generator.py [options]
 ```
+Examples:
 
-Exemplos:
-
-Gerar uma senha com 16 caracteres:
+Generate a 16-character password:
 ```
 python generator.py --length 16
 ```
 
-Gerar uma senha com letras, números e símbolos:
+Generate a password with letters, numbers, and symbols:
 ```
 python generator.py --charset all
 ```
 
-Gerar senha com conjunto personalizado:
+Generate a password with a custom character set:
 ```
 python generator.py --charset custom --custom "ABC123!@#"
 ```
 ---
+### Available charset options
+
+- lower: lowercase letters
+- upper: uppercase letters
+- alnum (default): letters and numbers
+- all: letters + numbers + special characters
