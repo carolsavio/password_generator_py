@@ -9,6 +9,11 @@ charsets = {
     "all": string.digits + string.punctuation + string.ascii_letters
 }
 
+def header(msg):
+    size = 60
+    print('-' * size)
+    print(msg.center(60))
+    print('-' * size)
 
 def password_generator(length: int, charset_name: str = "alnum") -> str:
     charset = charsets.get(charset_name, charset_name)
@@ -29,7 +34,11 @@ def main():
         charset = charsets[args.charset]
 
     pw = password_generator(args.length, charset)
-    print(pw)
+    header('Your new random password')
+    print()
+    print(f'{pw.center(60)}')
+    print()
+    
 
 if __name__ == "__main__":
     main()
